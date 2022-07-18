@@ -54,3 +54,16 @@
 <h4>Two-way Data Binding</h4>
 <h5>{{ texto }}</h5>
 <input type="text" [(ngModel)]="texto">
+
+<br><br>
+
+<h2>Ball Move</h2>
+<div id="quadrado" (keydown)="moverTeclado($event)">
+    <input type="button" value="Play">
+    <div id="ball" [style]="stylePosition">
+    </div>
+</div>
+<button (click)="moverEsquerda()">Esquerda</button>
+<button (click)="moverDireita()">Direita</button>
+<button (click)="moverCima()">Cima</button>
+<button (click)="moverBaixo()">Baixo</button>

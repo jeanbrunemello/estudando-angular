@@ -1,7 +1,7 @@
-import { Routes, RouterModule } from '@angular/router'
-import { AppComponent } from './app.component';
+import { Routes, RouterModule } from '@angular/router';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { PostSimulatorComponent } from './post-simulator/post-simulator.component';
 const routes: Routes = [
     {
         path: '',
@@ -14,6 +14,10 @@ const routes: Routes = [
     {
         path: 'data-binding',
         component: DataBindingComponent
+    },
+    {
+        path: 'post-simulator',
+        component: PostSimulatorComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);
