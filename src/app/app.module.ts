@@ -10,6 +10,7 @@ import { PostSimulatorComponent } from './post-simulator/post-simulator.componen
 import { ComponentAngularComponent } from './component-angular/component-angular.component';
 import { ExternoComponent } from './externo/externo.component';
 import { InternoComponent } from './externo/interno/interno.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InternoComponent } from './externo/interno/interno.component';
     PostSimulatorComponent,
     ComponentAngularComponent,
     ExternoComponent,
-    InternoComponent
+    InternoComponent,
+    DiretivasComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ComponentAngularComponent } from './component-angular/component-angular.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 import { ExternoComponent } from './externo/externo.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { PostSimulatorComponent } from './post-simulator/post-simulator.component';
@@ -28,6 +29,10 @@ const routes: Routes = [
     {
         path: 'in-out',
         component: ExternoComponent
+    },
+    {
+        path: 'diretivas',
+        component: DiretivasComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);
