@@ -19,9 +19,30 @@
 <h2>Exemplo</h2>
 <div id="container">
     <h2>Externo</h2>
-    <!--{{ nomeExterno }} nomeExterno é um variavel da classe ExternoComponent
+    <!--
+    Input
+    {{ nomeExterno }} nomeExterno é um variavel da classe ExternoComponent
     <app-interno [nomeInterno]="nomeExterno"></app-interno>
-    Inserindo o valor do componente Externo ao componete Interno-->
+    Inserindo o valor do componente Externo ao componete Interno
     {{ nomeExterno }}
-    <app-interno (enviaNome)="recebeNome($event)"></app-interno>
+    <app-interno (enviaNome)="recebeNome($event)"></app-interno>-->
+    {{ "Nome: " + pessoa.nome + " Idade: " + pessoa.idade }}
+    <app-interno [pessoa]="pessoa" #interno></app-interno>
 </div>
+
+<hr>
+<h2>Template Variable</h2>
+<p>
+    Template Variables são variáveis que o angular nos permite definir dentro dos elementos HTML do template do seu componente. A sintaxe de Template Variable é "#" e o nome que você definir.
+</p>
+{{ texto }}<br>
+<!--Defino um variavel "campo" e tem o valor de um objeto DOM HTMLElement-->
+<input type="text" #campo>
+<button (click)="mostrar(campo.value)">Mostrar</button>
+<hr>
+
+<h2>ViewChild</h2>
+<p>
+    View Child permite acessar dados, atributos e métodos de elementos ou componentes do template HTML. Utiliza-se o decorator @ViewChild para anotar a propriedade que receberá o elemento HTML ou o componente Angular.
+</p>
+<h3>Dado interno: {{ interno.propriedade }}</h3>
