@@ -1,4 +1,4 @@
-<h1>Comunicação entre componentes</h1>
+<h2>Comunicação entre componentes</h2>
 <p>
     É a forma como utilizamos os recursos do Angular para transmitir dados entre os componentes na aplicação.
 </p>
@@ -37,7 +37,7 @@
 </p>
 {{ texto }}<br>
 <!--Defino um variavel "campo" e tem o valor de um objeto DOM HTMLElement-->
-<input type="text" #campo>
+<input type="text" #campo value="Valor do input">
 <button (click)="mostrar(campo.value)">Mostrar</button>
 <hr>
 
@@ -46,3 +46,4 @@
     View Child permite acessar dados, atributos e métodos de elementos ou componentes do template HTML. Utiliza-se o decorator @ViewChild para anotar a propriedade que receberá o elemento HTML ou o componente Angular.
 </p>
 <h3>Dado interno: {{ interno.propriedade }}</h3>
+<h3>Campo possui o valor: {{ campo.value }}</h3>

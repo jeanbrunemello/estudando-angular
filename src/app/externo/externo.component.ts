@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { InternoComponent } from './interno/interno.component';
 
 @Component({
@@ -27,7 +27,10 @@ export class ExternoComponent {
     this.texto = texto;
   }
 
-  // ViewChild
-  @ViewChild('interno')
+  // ViewChild / Ver Filho
+  @ViewChild('interno') // passando a Template Variable do meu filho
   public interno!: InternoComponent;
+
+  @ViewChild('campo')
+  public campo!: ElementRef; // Tipo de filho de um elemento HTML
 }
