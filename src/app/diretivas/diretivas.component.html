@@ -96,3 +96,91 @@
 {{ texto }} <br>
 <!--Banana na Caixa-->
 <input type="text" [(ngModel)]="texto">
+<hr>
+
+<h2>ng-template</h2>
+<p *ngIf="false; else texto2">
+    1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consequuntur, necessitatibus consectetur laboriosam fuga laborum magni impedit tempora dignissimos officia vero! Minima fuga placeat quas ea quis a, ipsa esse.
+</p>
+<ng-template #texto2>
+    <p>
+        2 - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non sit excepturi ducimus maiores. Quibusdam maiores quasi minima provident accusamus quaerat incidunt obcaecati quos animi adipisci, accusantium voluptates cumque officia rerum?
+    </p>
+</ng-template>
+<hr>
+
+<h2>ng-container</h2>
+<ng-container [ngSwitch]="1">
+    <p *ngSwitchCase="1">Janeiro</p>
+    <p *ngSwitchCase="2">Fevereiro/p>
+    <p *ngSwitchCase="3">Março</p>
+</ng-container>
+<hr>
+
+<h2>ng-content</h2>
+<app-teste>
+    <h3>Component teste 2!</h3>
+    <p>Paragrafo de teste!</p>
+    <div class="p2">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, pariatur. Magni hic ex obcaecati, libero ut culpa, temporibus fugit provident alias aperiam ipsam! Alias commodi dicta impedit corrupti quo magnam.]
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere earum rem harum quisquam cumque quae sequi. Quas vero assumenda quos impedit id aliquid cumque dolorem. Molestias porro sunt sequi voluptates.
+        </p>
+    </div>
+</app-teste>
+<hr>
+
+<h2>Diretivas Customizadas (Pink)</h2>
+<h3 pink>Titulo</h3>
+<p pink>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sint soluta magni delectus ratione numquam! Sunt, reiciendis corporis facilis nesciunt, libero totam amet expedita, non est quasi a quaerat quis!
+</p>
+<h4 pink>Titlo 2</h4>
+<hr>
+
+<h2 [highlight]="color">Diretivas Customizadas (Mouse Highlight)</h2>
+<h3 [highlight]="color">Titulo teste</h3>
+<p [highlight]="color">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellat soluta culpa harum rerum nostrum officiis sapiente voluptas quam, possimus suscipit asperiores quod quo nulla ab, dignissimos quia maxime? Illum.
+</p>
+<input type="text" #campoColor>
+<button (click)="aplicarCor(campoColor.value)">Aplicar Cor</button>
+<hr>
+
+<h2>Diretivas Customizadas (Texto Azul)</h2>
+<h3 textBlue>Titulo</h3>
+
+<!--<ng-templ [ngIf]="true"></ng-templ>-->
+
+<!--
+<hr>
+
+<ng-template [ngIf]="false" [ngIfElse]="texto2">
+    <p>
+        1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consequuntur, necessitatibus consectetur laboriosam fuga laborum magni impedit tempora dignissimos officia vero! Minima fuga placeat quas ea quis a, ipsa esse.
+    </p>
+</ng-template>
+<ng-template #texto2>
+    <p>
+        2 - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non sit excepturi ducimus maiores. Quibusdam maiores quasi minima provident accusamus quaerat incidunt obcaecati quos animi adipisci, accusantium voluptates cumque officia rerum?
+    </p>
+</ng-template>
+
+<hr>
+
+<ul>
+    <li *ngFor="let item of listaCompras">{{ item }}</li>
+</ul>
+
+<hr>
+
+<ul>
+    <ng-template ngFor [ngForOf]="listaCompras" let-item>
+        <li>
+            {{ item }}
+        </li>
+    </ng-template>
+</ul>
+-->

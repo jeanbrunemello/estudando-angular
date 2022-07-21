@@ -47,4 +47,10 @@ export class DiretivasComponent {
 
   // NgModel
   public texto: string = "";
+
+  // Highlight
+  public color: string = "yellow";
+  public aplicarCor(color: string): void {
+    this.color = color;
+  }
 }

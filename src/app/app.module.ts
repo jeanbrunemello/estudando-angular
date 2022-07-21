@@ -12,6 +12,10 @@ import { ExternoComponent } from './externo/externo.component';
 import { InternoComponent } from './externo/interno/interno.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { ListaAlunosComponent } from './lista-alunos/lista-alunos.component';
+import { TesteComponent } from './teste/teste.component';
+import { PinkDirective } from './diretivas-customizadas/pink.directive';
+import { MouseHighlightDirective } from './diretivas-customizadas/mouse-highlight.directive';
+import { TextBlueDirective } from './diretivas-customizadas/text-blue.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { ListaAlunosComponent } from './lista-alunos/lista-alunos.component';
     ExternoComponent,
     InternoComponent,
     DiretivasComponent,
-    ListaAlunosComponent
+    ListaAlunosComponent,
+    TesteComponent,
+    PinkDirective,
+    MouseHighlightDirective,
+    TextBlueDirective
   ],
   imports: [
     BrowserModule,
