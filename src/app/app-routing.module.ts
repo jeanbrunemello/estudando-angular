@@ -4,6 +4,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { ExternoComponent } from './externo/externo.component';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { ListaAlunosComponent } from './lista-alunos/lista-alunos.component';
 import { PostSimulatorComponent } from './post-simulator/post-simulator.component';
 const routes: Routes = [
     {
@@ -33,6 +34,10 @@ const routes: Routes = [
     {
         path: 'diretivas',
         component: DiretivasComponent
+    },
+    {
+        path: 'lista-alunos',
+        component: ListaAlunosComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);

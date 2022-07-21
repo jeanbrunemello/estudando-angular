@@ -11,6 +11,7 @@ import { ComponentAngularComponent } from './component-angular/component-angular
 import { ExternoComponent } from './externo/externo.component';
 import { InternoComponent } from './externo/interno/interno.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
+import { ListaAlunosComponent } from './lista-alunos/lista-alunos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
     ComponentAngularComponent,
     ExternoComponent,
     InternoComponent,
-    DiretivasComponent
+    DiretivasComponent,
+    ListaAlunosComponent
   ],
   imports: [
     BrowserModule,
