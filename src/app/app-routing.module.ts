@@ -1,4 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
+import { CicloDeVidaComponent } from './ciclo-de-vida/ciclo-de-vida.component';
 import { ComponentAngularComponent } from './component-angular/component-angular.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
@@ -38,6 +39,10 @@ const routes: Routes = [
     {
         path: 'lista-alunos',
         component: ListaAlunosComponent
+    },
+    {
+        path: 'ciclo-de-vida',
+        component: CicloDeVidaComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);

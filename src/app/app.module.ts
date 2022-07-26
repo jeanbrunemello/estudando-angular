@@ -16,6 +16,9 @@ import { TesteComponent } from './teste/teste.component';
 import { PinkDirective } from './diretivas-customizadas/pink.directive';
 import { MouseHighlightDirective } from './diretivas-customizadas/mouse-highlight.directive';
 import { TextBlueDirective } from './diretivas-customizadas/text-blue.directive';
+import { CicloDeVidaComponent } from './ciclo-de-vida/ciclo-de-vida.component';
+import { AuxiliarComponent } from './auxiliar/auxiliar.component';
+import { TituloComponent } from './titulo/titulo.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { TextBlueDirective } from './diretivas-customizadas/text-blue.directive'
     TesteComponent,
     PinkDirective,
     MouseHighlightDirective,
-    TextBlueDirective
+    TextBlueDirective,
+    CicloDeVidaComponent,
+    AuxiliarComponent,
+    TituloComponent
   ],
   imports: [
     BrowserModule,
