@@ -4,45 +4,29 @@ import { RoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { IntroductionComponent } from './introduction/introduction.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
-import { PostSimulatorComponent } from './post-simulator/post-simulator.component';
 import { ComponentAngularComponent } from './component-angular/component-angular.component';
-import { ExternoComponent } from './externo/externo.component';
-import { InternoComponent } from './externo/interno/interno.component';
-import { DiretivasComponent } from './diretivas/diretivas.component';
-import { ListaAlunosComponent } from './lista-alunos/lista-alunos.component';
-import { TesteComponent } from './teste/teste.component';
-import { PinkDirective } from './diretivas-customizadas/pink.directive';
-import { MouseHighlightDirective } from './diretivas-customizadas/mouse-highlight.directive';
-import { TextBlueDirective } from './diretivas-customizadas/text-blue.directive';
-import { CicloDeVidaComponent } from './ciclo-de-vida/ciclo-de-vida.component';
-import { AuxiliarComponent } from './auxiliar/auxiliar.component';
-import { TituloComponent } from './titulo/titulo.component';
+import { CicloDeVidaModule } from './ciclo-de-vida/ciclo-de-vida.module';
+import { PipesModule } from './pipes/pipes.module';
+import { DataBindingModule } from './data-binding/data-binding.module';
+import { DiretivasModule } from './diretivas/diretivas.module';
+import { ComunicacaoDeComponentesModule } from './comunicacao-de-componentes/comunicacao-de-componentes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroductionComponent,
-    DataBindingComponent,
-    PostSimulatorComponent,
-    ComponentAngularComponent,
-    ExternoComponent,
-    InternoComponent,
-    DiretivasComponent,
-    ListaAlunosComponent,
-    TesteComponent,
-    PinkDirective,
-    MouseHighlightDirective,
-    TextBlueDirective,
-    CicloDeVidaComponent,
-    AuxiliarComponent,
-    TituloComponent
+    ComponentAngularComponent
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    FormsModule
+    FormsModule,
+    CicloDeVidaModule,
+    PipesModule,
+    DataBindingModule,
+    DiretivasModule,
+    ComunicacaoDeComponentesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

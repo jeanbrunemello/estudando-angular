@@ -1,12 +1,13 @@
 import { Routes, RouterModule } from '@angular/router';
-import { CicloDeVidaComponent } from './ciclo-de-vida/ciclo-de-vida.component';
+import { CicloDeVidaComponent } from './ciclo-de-vida/ciclo-de-vida/ciclo-de-vida.component';
 import { ComponentAngularComponent } from './component-angular/component-angular.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { DiretivasComponent } from './diretivas/diretivas.component';
-import { ExternoComponent } from './externo/externo.component';
 import { IntroductionComponent } from './introduction/introduction.component';
-import { ListaAlunosComponent } from './lista-alunos/lista-alunos.component';
-import { PostSimulatorComponent } from './post-simulator/post-simulator.component';
+import { PipesComponent } from './pipes/pipes/pipes.component';
+import { PostSimulatorComponent } from './data-binding/post-simulator/post-simulator.component';
+import { DataBindingComponent } from './data-binding/data-binding/data-binding.component';
+import { DiretivasComponent } from './diretivas/diretivas/diretivas.component';
+import { ListaAlunosComponent } from './diretivas/lista-alunos/lista-alunos.component';
+import { ExternoComponent } from './comunicacao-de-componentes/externo/externo.component';
 const routes: Routes = [
     {
         path: '',
@@ -43,6 +44,10 @@ const routes: Routes = [
     {
         path: 'ciclo-de-vida',
         component: CicloDeVidaComponent
+    },
+    {
+        path: 'pipes',
+        component: PipesComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);
