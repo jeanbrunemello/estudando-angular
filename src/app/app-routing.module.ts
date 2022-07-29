@@ -8,6 +8,9 @@ import { DataBindingComponent } from './data-binding/data-binding/data-binding.c
 import { DiretivasComponent } from './diretivas/diretivas/diretivas.component';
 import { ListaAlunosComponent } from './diretivas/lista-alunos/lista-alunos.component';
 import { ExternoComponent } from './comunicacao-de-componentes/externo/externo.component';
+import { ModuloComponent } from './modulo-teste/modulo/modulo.component';
+import { LandingPageComponent } from './modulo-teste/landing-page/landing-page.component';
+import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 const routes: Routes = [
     {
         path: '',
@@ -48,6 +51,18 @@ const routes: Routes = [
     {
         path: 'pipes',
         component: PipesComponent
+    },
+    {
+        path: 'modulos',
+        component: ModuloComponent
+    },
+    {
+        path: 'landing-page',
+        component: LandingPageComponent
+    },
+    {
+        path: 'template-driven',
+        component: TemplateDrivenComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);

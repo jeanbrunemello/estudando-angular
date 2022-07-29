@@ -1,0 +1,40 @@
+<div class="container">
+    <h3>Cadastro de Super Heroi</h3>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="mb-3 form-group">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" name="name" ngModel required
+                #name="ngModel">
+            <small class="text-danger" *ngIf="name.invalid && name.touched">O campo nome deve ser preenchido!</small>
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="hero" class="form-label">Nome de super heroi</label>
+            <input type="text" class="form-control" id="hero" name="nameHero" ngModel required #nameHero="ngModel">
+            <small class="text-danger" *ngIf="nameHero.invalid && nameHero.touched">O campo nome de super heroi deve ser preenchido!</small>
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="force" class="form-label">Poderes</label>
+            <input type="text" class="form-control" id="force" name="force" ngModel required #force="ngModel">
+            <small class="text-danger" *ngIf="force.invalid && force.touched">O campo poderes deve ser preenchido!</small>
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="age" class="form-label">Idade</label>
+            <input type="number" class="form-control" id="age" name="age" ngModel required min="1" max="130" #age="ngModel">
+            <small class="text-danger" *ngIf="age.invalid && age.touched">Idade inválida!</small>
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" ngModel required email #email="ngModel">
+            <small class="text-danger" *ngIf="email.invalid && email.touched">Email inválido!</small>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Cadastrar</button>
+    </form>
+
+    <div>
+        {{ hero | json }}
+    </div>
+</div>
