@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DataDrivenComponent } from './data-driven/data-driven.component';
 
 
 
 @NgModule({
   declarations: [
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    DataDrivenComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     TemplateDrivenComponent
