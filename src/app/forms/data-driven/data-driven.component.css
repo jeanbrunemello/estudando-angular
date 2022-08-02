@@ -1,14 +1,14 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css);
 
-/*input.item {
+input.item {
     margin-bottom: 15px;
-}*/
+}
 
 small.text-danger {
     display: none;
 }
 
-.error input {
+.error input.ng-invalid.ng-touched {
     border: 1px solid red;
 }
 

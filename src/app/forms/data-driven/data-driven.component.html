@@ -3,9 +3,10 @@
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
         <div class="form-group mb-3" [ngClass]="aplicaCssError('descriptions')">
             <label for="description" class="form-label">Descrição</label>
-            <input type="text" class="form-control item" id="description" formControlName="descriptions">
-            <small class="text-danger">O campo descrição deve ser preenchido.</small>
-            <!--<button type="button" class="btn btn-primary" (click)="addItem()">Adicionar novo item</button>-->
+            <div formArrayName="descriptions" *ngFor="let item of descriptions.controls; let i = index">
+                <input type="text" class="form-control item" id="description" [formControlName]="i">
+            </div>
+            <button type="button" class="btn btn-primary" (click)="addItem()">Adicionar novo item</button>
         </div>
         <div class="form-group mb-3" [ngClass]="aplicaCssError('client')">
             <label for="client" class="form-label">Cliente</label>
@@ -20,4 +21,8 @@
         <button type="submit" class="btn btn-success me-3" [disabled]="formulario.invalid">Vender</button>
         <button type="button" class="btn btn-danger" (click)="onReset()">Cancelar</button>
     </form>
+
+    <div>
+        {{ formulario.value | json }}
+    </div>
 </div>

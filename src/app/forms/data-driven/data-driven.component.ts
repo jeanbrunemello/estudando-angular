@@ -9,14 +9,16 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 export class DataDrivenComponent implements OnInit {
 
   formulario: FormGroup;
-  //descriptions: FormArray;
+  descriptions: FormArray;
   formBuilder: FormBuilder;
 
   constructor(formBuilder: FormBuilder) {
     this.formBuilder = formBuilder;
 
     this.formulario = formBuilder.group({
-      descriptions: ['', [Validators.required]],
+      descriptions: formBuilder.array([
+        ['', [Validators.required]]
+      ]),
       client: ['', [Validators.required]],
       total: ['', [Validators.required, Validators.min(0)]]
     });
@@ -26,7 +28,7 @@ export class DataDrivenComponent implements OnInit {
       client: new FormControl('', [Validators.required]),
       total: new FormControl('', [Validators.required, Validators.min(0)])
     });*/
-    //this.descriptions = <FormArray>this.formulario.get('descriptions');
+    this.descriptions = <FormArray>this.formulario.get('descriptions');
   }
 
   ngOnInit(): void {
@@ -46,8 +48,9 @@ export class DataDrivenComponent implements OnInit {
     }
   }
 
-  /*addItem(): void {
-    this.descriptions.push(new FormControl(''));
-  }*/
+  addItem(): void {
+    this.descriptions.push(new FormControl('', [Validators.required]));
+    this.formulario.controls['descriptions'] = this.descriptions;
+  }
 
 }
