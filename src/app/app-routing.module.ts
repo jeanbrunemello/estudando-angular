@@ -12,6 +12,7 @@ import { ModuloComponent } from './modulo-teste/modulo/modulo.component';
 import { LandingPageComponent } from './modulo-teste/landing-page/landing-page.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { DataDrivenComponent } from './forms/data-driven/data-driven.component';
+import { FoodsComponent } from './servicos/foods/foods.component';
 const routes: Routes = [
     {
         path: '',
@@ -68,6 +69,10 @@ const routes: Routes = [
     {
         path: 'data-driven',
         component: DataDrivenComponent
+    },
+    {
+        path: 'foods',
+        component: FoodsComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);

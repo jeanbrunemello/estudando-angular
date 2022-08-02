@@ -1,0 +1,19 @@
+<h1>Foods</h1>
+<ul>
+    <li *ngFor="let food of listFood">{{food.id}} {{food.name}} ({{food.description}}), {{food.calories}}kcal</li>
+</ul>
+
+<h2>Pesquisa</h2>
+<input type="text" #campoFood (keyup)="searchFood(campoFood.value)">
+<button (click)="searchFood(campoFood.value)">Pesquisa</button>
+
+<h2>Cadastro de Food</h2>
+<form [formGroup]="form" (ngSubmit)="adicionarFood()">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" formControlName="name"> <br><br>
+    <label for="description">Descrição</label>
+    <input type="text" id="description" formControlName="description"> <br><br>
+    <label for="calories">Calorias</label>
+    <input type="number" id="colories" formControlName="calories"> <br><br>
+    <button type="submit">Adicionar</button>
+</form>

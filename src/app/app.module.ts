@@ -13,6 +13,8 @@ import { DiretivasModule } from './diretivas/diretivas.module';
 import { ComunicacaoDeComponentesModule } from './comunicacao-de-componentes/comunicacao-de-componentes.module';
 import { ModuloTesteModule } from './modulo-teste/modulo-teste.module';
 import { FormsModule2 } from './forms/forms.module';
+import { ServicosModule } from './servicos/servicos.module';
+import { FoodService } from './servicos/food.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,12 @@ import { FormsModule2 } from './forms/forms.module';
     DiretivasModule,
     ComunicacaoDeComponentesModule,
     ModuloTesteModule,
-    FormsModule2
+    FormsModule2,
+    ServicosModule
   ],
-  providers: [],
+  providers: [
+    //FoodService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

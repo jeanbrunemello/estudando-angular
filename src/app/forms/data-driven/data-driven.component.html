@@ -1,3 +1,33 @@
+<h3>Data Driven Forms (Formulários Reativos)</h3>
+<p>
+    Os formulários reativos fornecem uma abordagem baseada em modelo para lidar com entradas de formulário cujos valores mudam ao longo do tempo. Cada alteração no estado do formulário retorna um novo estado, que mantém a integridade do modelo entre as alterações. Para utilizar formulários reativos deve-se importar o modulo ReactiveFormsModule.
+</p>
+<hr>
+
+<h3>FormGroup</h3>
+<p>
+    Rastreia o valor e o estado de validade de um grupo de FormControlinstâncias.
+</p>
+<hr>
+
+<h3>FormControl</h3>
+<p>
+    Rastreia o valor e o status de validação de um controle de formulário individual.
+</p>
+<hr>
+
+<h3>FormArray</h3>
+<p>
+    Rastreia o valor e o estado de validade de uma matriz de FormControl.
+</p>
+<hr>
+
+<h3>FormBuilder</h3>
+<p>
+    O FormBuilder fornece uma sintaxe curta para a criação de instâncias de a FormControl, FormGroup, ou FormArray.
+</p>
+<hr>
+
 <div class="container">
     <h3>Caixa de Super Mercado</h3>
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
