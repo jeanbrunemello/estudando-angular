@@ -23,6 +23,12 @@
             "name": "Os Vingadores",
             "category": "Ação/Aventura",
             "year": 2012
+        },
+        {
+            "id": 5,
+            "name": "Tropa de Elite",
+            "category": "Ação/Drama",
+            "year": 2007
         }
     ]
 }
