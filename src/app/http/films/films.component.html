@@ -1,10 +1,23 @@
+<h2>HTTP</h2>
+<p>
+    HTTP (Hypertext Transfer Protocol, ou Protocolo de Transferência de Hipertexto) trata-se do protocolo de comunicação fundamental da web. Ele permite executar requisições e envio de documentos (HTML, CSS, JavaScript) pela internet.
+</p>
+<hr>
+
+<h2>HttpClient</h2>
+<p>
+    Angular fornece HttpClient, classe de serviço que fornece recursos para requisição e envio de dados via HTTP, que permite a comunicação da aplicação com uma API (back-end). Para utilizar esse serviço é necessário importar o modulo HttpClientModule.
+</p>
+<hr>
+
+<h2>Exemplo (Filmes)</h2>
 <p>
     <strong>Obs</strong>: Antes de executar a aplicação Angular, é necessário executar o json-server. (npm install json-server / json-server --watch server/films.json)
 </p>
 <p>
     Documentação Json Server: <a href="https://www.npmjs.com/package/json-server">link</a>
 </p>
-<h2>Filmes</h2>
+<h3>Filmes</h3>
 <table>
     <thead>
         <tr>
@@ -29,7 +42,7 @@
 </table>
 
 <hr>
-<h2>Cadastrar Filme</h2>
+<h3>Cadastrar Filme</h3>
 <form [formGroup]="form" (ngSubmit)="cadastrar()">
     <label for="name">Nome</label><br>
     <input type="text" id="name" formControlName="name"> <br><br>
